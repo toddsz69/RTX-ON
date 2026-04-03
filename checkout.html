@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - RTX 5090 Series</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Ubuntu', sans-serif; background: #f0f0f0; }
+        .checkout-container { display: flex; gap: 40px; padding: 60px 80px; min-height: 100vh; align-items: flex-start; }
+        .product-spec, .checkout-form { flex: 1; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+
+        .product-image-wrapper {
+            width: 100%;
+            height: 350px;
+            background: #f9f9f9;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: none; 
+        }
+
+ 
+        .show-img { display: block !important; }
+
+
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        input, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
+        .spec-list { margin-top: 20px; list-style: none; padding: 0; }
+        .spec-list li { padding: 12px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-size: 14px; }
+        .order-btn { width: 100%; background: #76b900; color: white; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 20px; }
+
+        @media (max-width: 992px) { .checkout-container { flex-direction: column; padding: 20px; } }
+    </style>
+</head>
+<body>
+
+    <div class="checkout-container">
+        <div class="product-spec">
+            <h2>Order Summary</h2>
+            
+            <div class="product-image-wrapper">
+                <img id="img-founders" src="@import url('httpsfonts.googleapis.comcss2family=Ubuntuwght@300;400;500;700&display=swap'); { margin 0; padding 0; box-sizing border-box; font-family 'Ubuntu', sans-serif; } a{ text-decoration non.png" alt="Founders Edition">
+                <img id="img-rog" src="rog-removebg-preview.png" alt="ROG Strix">
+                <img id="img-msi" src="msi.webp" alt="MSI Suprim">
+                <img id="img-aorus" src="aorus.png" alt="AORUS Master">
+                <img id="img-gigabyte" src="assets/gigabyte.png" alt="Gigabyte Gaming OC">
+            </div>
+
+            <h3 id="display-name">RTX 5090 Series</h3>
+            <ul class="spec-list" id="spec-container"></ul>
+        </div>
+
+        <div class="checkout-form">
+            <h2>Shipping & Payment</h2>
+            <form>
+                <div class="form-group"><label>Full Name</label><input type="text" required></div>
+                <div class="form-group"><label>Shipping Address</label><input type="text" required></div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select><option>Visa / Mastercard</option><option>PayPal</option></select>
+                </div>
+                <div class="form-group" style="display: flex; gap: 10px;">
+                    <div style="flex: 1;"><label>Quantity</label><input type="number" id="qty" value="1" min="1" oninput="updateTotal()"></div>
+                    <div style="flex: 2;"><label>Total Price (USD)</label><input type="text" id="total-price" readonly style="background: #eee; font-weight: bold;"></div>
+                </div>
+                <button type="submit" class="order-btn">CONFIRM PURCHASE</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+     
+        const products = {
+            'founders': { 
+                name: 'RTX 5090 Founders Edition',
+                price: 1999,
+                imgId: 'img-founders',
+                specs: ['32GB GDDR7', 'Dual Axial Flow', 'Titanium Finish']
+            },
+            'rog': { 
+                name: 'ASUS ROG Strix RTX 5090',
+                price: 2399,
+                imgId: 'img-rog',
+                specs: ['32GB GDDR7', 'Vapor Chamber', 'Aura Sync RGB']
+            },
+            'msi': {
+                name: 'MSI Suprim X RTX 5090',
+                price: 2249,
+                imgId: 'img-msi',
+                specs: ['32GB GDDR7', 'Tri Frozr 3S', 'Silent Mode']
+            },
+            'aorus': {
+                name: 'Gigabyte AORUS RTX 5090',
+                price: 2199,
+                imgId: 'img-aorus',
+                specs: ['32GB GDDR7', 'LCD Edge View', 'Windforce Stack']
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const productKey = urlParams.get('product'); 
+        const selected = products[productKey];
+
+        if (selected) {
+            document.getElementById('display-name').innerText = selected.name;
+            document.getElementById(selected.imgId).classList.add('show-img');
+
+            const container = document.getElementById('spec-container');
+            selected.specs.forEach(s => {
+                container.innerHTML += `<li><span>Feature</span> <span>${s}</span></li>`;
+            });
+
+            updateTotal();
+        } else {
+         
+            document.getElementById('display-name').innerText = products['founders'].name;
+            document.getElementById(products['founders'].imgId).classList.add('show-img');
+        }
+
+        function updateTotal() {
+            const currentItem = selected || products['founders'];
+            const qty = document.getElementById('qty').value;
+            const total = currentItem.price * qty;
+            document.getElementById('total-price').value = "$" + total.toLocaleString() + " USD";
+        }
+    </script>
+</body>
+</html>

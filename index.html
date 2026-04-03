@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive RTX Website</title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#" class="logo">RTX-ON</a>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#blog">RTXs</a>
+            <a href="#about">About Us</a>
+        </div>
+        <div class="login">
+            <button class="signup">RTX</button>
+            <button>-ON</button>
+        </div>
+    </nav>
+
+    <header id="home">
+        <video autoplay muted loop id="bg-video">
+            <source src="GeForce RTX 50 Series GPUs and Laptops _ Game Changer - (720p).mp4" type="video/mp4">
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <div class="left">
+            <h1>RTX. <span>It's On.</span></h1>
+            <p>The Ultimate in Ray Tracing and AI.</p>
+            <a href="#">
+                <i class='bx bx-basket'></i>
+                <span>Buy Now</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="game-video-section">
+    <div class="container">
+        <h2>
+        Enjoy RTX in today's most phenomenal games.</h2>
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/M3fglmDxD2U?autoplay=0&rel=0" 
+                
+                title="RTX Game Trailer" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<div class="comparison-section dark-bg">
+    <div class="container-wrapper">
+        <h2 class="separator-light">RTX ON vs RTX OFF</h2>
+        <p class="sub-text">
+        Move the slider to see the difference in Ray Tracing details.</p>
+        
+        <div class="comparison-container">
+            <div class="image-container">
+                <img class="image-after" src="geforce-ray-tracing-half-life-2-rtx-on-2048@2x.jpg" alt="RTX ON">
+                <div class="img-before-wrapper">
+                    <img class="image-before" src="geforce-ray-tracing-half-life-2-rtx-off-2048@2x.jpg" alt="RTX OFF">
+                </div>
+            </div>
+            
+            <input type="range" min="0" max="100" value="50" class="slider" id="rtx-slider">
+            
+            <div class="slider-line"></div>
+            <div class="slider-button">
+                <i class='bx bxs-left-arrow'></i>
+                <i class='bx bxs-right-arrow'></i>
+            </div>
+        </div>
+    </div>
+</div>
+   <section class="rtx-features" id="features">
+    <h2 class="separator">RTX Features</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="card-icon">
+                <i class='bx bx-chip'></i> </div>
+            <div class="card-content">
+                <h5>NVIDIA DLSS 4</h5>
+                <p>DLSS is a revolutionary suite of neural rendering technologies that uses AI to increase FPS, reduce latency, and enhance image quality.</p>
+                <div class="accent-line"></div>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <div class="card-icon">
+                <i class='bx bx-cube-alt'></i>
+            </div>
+            <div class="card-content">
+                <h5>Path Tracing</h5>
+                <p>NVIDIA Blackwell architecture unlocks game-changing path tracing realism. Experience cinematic-quality visuals at unprecedented speeds.</p>
+                <div class="accent-line"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rtx-games" id="games">
+    <h2 class="game-section-title">RTX Games</h2>
+    
+    <div class="games-grid">
+        <div class="game-card">
+            <div class="game-img">
+                <img src="re9.png" alt="Resident Evil Requiem">
+            </div>
+            <div class="game-info">
+                <h3>Resident Evil Requiem</h3>
+                <p class="game-desc">
+                    Resident Evil Requiem is the ninth installment in the main Resident Evil series. Prepare to dance with death in a thrilling experience that will send shivers down your spine. A hymn to the dead. A nightmare for the living.
+                </p>
+                <a href="https://www.youtube.com/watch?v=u0mgOPbpagc&pp=ygUKcmU5IG52aWRpYQ%3D%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="007.jpeg" alt="007 First Light">
+            </div>
+            <div class="game-info">
+                <h3>007 First Light</h3>
+                <p class="game-desc">
+                    Discover the origin story of the world's most famous spy in 007 First Light, a thrilling narrative action adventure where you follow James Bond as a bright, sometimes reckless young recruit in the MI6 training program.
+                </p>
+                <a href="https://www.youtube.com/watch?v=-evOlpsFdXM&pp=ygUKMDA3IG52aWRpYQ%3D%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="phantom.png" alt="Phantom Blade Zero">
+            </div>
+            <div class="game-info">
+                <h3>Phantom Blade Zero</h3>
+                <p class="game-desc">
+                    Phantom Blade Zero is an upcoming wuxia action RPG from S-Game, where players take on the role of Soul, an elite assassin serving a powerful organization. Uncover the truth behind the conspiracy in this fast-paced new third-person adventure game.
+                </p>
+                <a href="https://www.youtube.com/watch?v=0F4WIZeo_KU&pp=ygUUcGhhbnRvbSBibGFkZSBudmlkaWHSBwkJ2QoBhyohjO8%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="pragmat.jpeg" alt="Pragmata">
+            </div>
+            <div class="game-info">
+                <h3>Pragmata</h3>
+                <p class="game-desc">
+                    Pragmata is an all-new Sci-Fi action adventure with unique hacking elements! The game is set in the not-too-distant future, and protagonist Hugh and his android companion, Diana, must work together as they explore a research station on a cold moon.
+                </p>
+                <a href="https://www.youtube.com/watch?v=a2qSDAsebpU&pp=ygUPcHJhZ21hdGEgbnZpZGlh" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="geforce-battlefield6-keyart-1920x1080.jpeg"Battlefield 6">
+            </div>
+            <div class="game-info">
+                <h3>Battlefield 6</h3>
+                <p class="game-desc">
+                    Battlefield 6 is the ultimate all-out combat experience. Fight in high-intensity infantry combat. Soar through the skies in thrilling aerial combat. Destroy your surroundings for a strategic advantage. In a war of tanks, fighter jets, and a massive arsenal—your troops are the deadliest weapon. This is Battlefield 6 powered by the GeForce RTX 50 Series for the definitive PC experience.
+                </p>
+                <a href="https://www.youtube.com/watch?v=ICJajlj_ujo&pp=ygULYmYgNiBudmlkaWE%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="geforce-arcraiders-keyart-1920x1080.jpeg" alt="v">
+            </div>
+            <div class="game-info">
+                <h3>ARC Raiders</h3>
+                <p class="game-desc">
+                    ARC Raiders is a multiplayer extraction adventure set on a deadly future Earth ravaged by a mysterious mechanical threat known as the ARC. Register as a Raider and explore the surface to survive in this barren world. But beware of the machines. Beware of Raiders who prey on humans.
+                </p>
+                <a href="https://www.youtube.com/watch?v=ub2OrMkdpYc&pp=ygUQYXJjcmlkZXJzIG52aWRpYQ%3D%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="rtx-games-doom-the-dark-ages-ari.jpeg" alt="DOOM: The Dark Ages">
+            </div>
+            <div class="game-info">
+                <h3>DOOM: The Dark Ages</h3>
+                <p class="game-desc">
+                    DOOM: The Dark Ages is a single-player action FPS and a prequel to the acclaimed DOOM and DOOM Eternal. Get a flagship PC experience with AI-accelerated DLSS 4 powered by GeForce RTX 50 Series graphics, and max out your ray-tracing graphics to experience the epic, cinematic origin story of the DOOM Slayer's wrath.
+
+                </p>
+                <a href="https://www.youtube.com/watch?v=v3q8taqRiGQ&pp=ygULZG9vbSBudmlkaWE%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="rtx-games-borderlands-4-ari.jpeg" alt="Borderlands 4">
+            </div>
+            <div class="game-info">
+                <h3>Borderlands 4</h3>
+                <p class="game-desc">
+                    Borderlands 4 is a chaotic shooter and looter game filled with millions of weapons, deadly enemies, and intense co-op action. Escape a dangerous hidden planet as one of four powerful new Vault Hunters.
+
+                </p>
+                <a href="https://www.youtube.com/watch?v=jaFfHMZmXV4&pp=ygUTYm9yZGVybGFuZCA0IG52aWRpYQ%3D%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="rtx-games-black-state.jpeg" alt="Black State">
+            </div>
+            <div class="game-info">
+                <h3>Black State</h3>
+                <p class="game-desc">
+                    Black State is a new single-player, story-driven action-adventure game with a mission to rescue captives and uncover the truth behind a major event. Enjoy ultra-photorealistic graphics enhanced with ray tracing, and maximize performance with DLSS 4 for the best PC experience. A release date will be announced later.
+
+                </p>
+                <a href="https://www.youtube.com/watch?v=HGQ_evDIkHQ&pp=ygURYmxhY2tzdGF0ZSBudmlkaWE%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="rtx-games-cinder-city-ari.jpeg" alt="CINDER CITY">
+            </div>
+            <div class="game-info">
+                <h3>CINDER CITY</h3>
+                <p class="game-desc">
+                    CINDER CITY is a cinematic open-world tactical shooter set in a post-apocalyptic Seoul in the near future. Players take on the role of a protagonist exploring the ruins of a once-vibrant city, now utterly transformed by a cataclysm. As they navigate the hostile environment, they will face intense tactical combat and complex moral choices. The game offers a deeply immersive single-player narrative experience, alongside cooperative gameplay where survival depends on teamwork and strategy. Launching in 2026.
+
+                </p>
+                <a href="https://www.youtube.com/watch?v=mals5_OF-GQ&pp=ygUSY2luZGVyIGNpdHkgbnZpZGlh" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="black-myth-wukong.jpeg" alt="Black Myth: Wukong">
+            </div>
+            <div class="game-info">
+                <h3>Black Myth: Wukong</h3>
+                <p class="game-desc">
+                    Black Myth: Wukong is an action RPG rooted in Chinese mythology, based on the Journey to the West. Embark on an epic journey as the Destined One and explore breathtaking landscapes, face powerful enemies and worthy rivals, and master the art of combat with GeForce RTX.
+
+                </p>
+                <a href="https://www.youtube.com/watch?v=97egUiMlLZM&pp=ygURYmxhY2sgbXl0aCBudmlkaWE%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="geforce-cyberpunk-3480x2160-1mb.jpeg" alt="Cyberpunk 2077: Ultimate Edition">
+            </div>
+            <div class="game-info">
+                <h3>Cyberpunk 2077: Ultimate Edition</h3>
+                <p class="game-desc">
+                    Experience Cyberpunk 2077 with the power of GeForce RTX. Dive into every story set in a dark future world, including the base game and the acclaimed, thrilling spy expansion, Phantom Liberty, enhanced with incredible full ray tracing and NVIDIA DLSS visuals.
+
+                </p>
+                <a href="https://www.youtube.com/watch?v=avWMEd-H8Qg&pp=ygUQY3liZXJwdW5rIG52aWRpYQ%3D%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="alan-awake-2-2560x1440-1.jpeg" alt="Alan Wake 2">
+            </div>
+            <div class="game-info">
+                <h3>Alan Wake 2</h3>
+                <p class="game-desc">
+                    Anderson's saga begins with an investigation into a ritualistic murder in a small town. Alan Wake writes a dark tale to shape the reality around him. These two heroes are somehow connected. Can they become the heroes they were meant to be? Find out with the power and performance of the flagship GeForce RTX.
+
+                </p>
+                <a href="https://www.youtube.com/watch?v=-Hi2EyAwedQ&pp=ygUPYWxhbndha2UgbnZpZGlh" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-img">
+                <img src="half-life2.jpeg" alt="Half-Life 2 RTX">
+            </div>
+            <div class="game-info">
+                <h3>Half-Life 2 RTX</h3>
+                <p class="game-desc">
+                    Relive the groundbreaking and critically acclaimed Half-Life 2, but this time, reimagined with RTX Remix. This free DLC for Half-Life 2 owners features full ray tracing, remastered assets, and DLSS 4 with Multi Frame Generation and Ray Reconstruction.
+
+                </p>
+                <a href="https://www.youtube.com/watch?v=j31ISEd8xRM&pp=ygUUaGFsZiBsaWZlIHJ0eCBudmlkaWE%3D" class="btn-watch">
+                    Watch Video <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+        </div>
+
+        </div>
+</section>
+
+    <h2 class="separator" id="blog">
+        Super Hot RTXs
+    </h2>
+
+    <div class="nft-shop" id="blog">
+    <div class="category">
+        
+    </div>
+
+    <div class="nft-list">
+    <div class="item">
+        <img src="@import url('httpsfonts.googleapis.comcss2family=Ubuntuwght@300;400;500;700&display=swap'); { margin 0; padding 0; box-sizing border-box; font-family 'Ubuntu', sans-serif; } a{ text-decoration non.png">
+        <div class="info">
+            <div>
+                <h5>RTX 5090 Founders Edition</h5>
+                <div class="btc">
+                    <i class='bx bx-dollar-circle'></i>
+                    <p>1,999 USD</p>
+                </div>
+            </div>
+            <p>In Stock</p>
+        </div>
+        <div class="bid">
+            <p>Limited Edition</p>
+            <a href="checkout.html?product=founders" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="aorus.png">
+        <div class="info">
+            <div>
+                <h5>Gigabyte AORUS RTX 5090</h5>
+                <div class="btc">
+                    <i class='bx bx-dollar-circle'></i>
+                    <p>2,199 USD</p>
+                </div>
+            </div>
+            <p>In Stock</p>
+        </div>
+        <div class="bid">
+            <p>Triple Fan</p>
+            <a href="checkout.html?product=aorus" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="rog-removebg-preview.png">
+        <div class="info">
+            <div>
+                <h5>ASUS ROG Strix RTX 5090</h5>
+                <div class="btc">
+                    <i class='bx bx-dollar-circle'></i>
+                    <p>2,399 USD</p>
+                </div>
+            </div>
+            <p>In Stock</p>
+        </div>
+        <div class="bid">
+            <p>RGB Sync</p>
+            <a href="checkout.html?product=rog" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="msi.webp">
+        <div class="info">
+            <div>
+                <h5>MSI Suprim X RTX 5090</h5>
+                <div class="btc">
+                    <i class='bx bx-dollar-circle'></i>
+                    <p>2,249 USD</p>
+                </div>
+            </div>
+            <p>In Stock</p>
+        </div>
+        <div class="bid">
+            <p>Liquid Cooling</p>
+            <a href="checkout.html?product=msi" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+</div>
+
+
+    <footer id="about">
+        <h3>The Ultimate in Ray Tracing and AI.</h3>
+        <div class="right">
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cooperation</a>
+                <a href="#">Sponsorship</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="social">
+                <i class='bx bxl-instagram'></i>
+                <i class='bx bxl-facebook-square'></i>
+                <i class='bx bxl-github'></i>
+            </div>
+            <p>Copyright © 2024 RTX-ON, All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+<script>
+    const slider = document.getElementById('rtx-slider');
+    const container = document.querySelector('.comparison-container');
+
+    slider.addEventListener('input', (e) => {
+        container.style.setProperty('--position', `${e.target.value}%`);
+    });
+</script>
+
+</html>
